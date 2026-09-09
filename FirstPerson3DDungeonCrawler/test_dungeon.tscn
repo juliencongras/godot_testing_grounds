@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cmh1ccd1x1pug"]
+
+[ext_resource type="PackedScene" uid="uid://cx4r5udovms0f" path="res://FirstPerson3DDungeonCrawler/dungeon_crawler_movement.tscn" id="1_41igw"]
+[ext_resource type="Texture2D" uid="uid://cs16da7o38y1a" path="res://icon.svg" id="2_s1cm1"]
+
+[node name="TestDungeon" type="Node3D" unique_id=1373708641]
+
+[node name="DungeonCrawlerMovement" parent="." unique_id=2135153137 instance=ExtResource("1_41igw")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=856140374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.200548)
+texture = ExtResource("2_s1cm1")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cx4r5udovms0f"]
+
+[ext_resource type="Script" uid="uid://bdglo0jg02g2v" path="res://FirstPerson3DDungeonCrawler/dungeon_crawler_movement.gd" id="1_km844"]
+
+[node name="DungeonCrawlerMovement" type="Node3D" unique_id=2135153137]
+script = ExtResource("1_km844")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=410440078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8719573, 0)
