@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b0646cr4kjjan"]
+
+[ext_resource type="Script" uid="uid://bn2xql6q46335" path="res://2dActionPlatformer/player/player_controller.gd" id="1_0ogo7"]
+[ext_resource type="Texture2D" uid="uid://cs16da7o38y1a" path="res://icon.svg" id="2_esej2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0yft"]
+size = Vector2(118, 121)
+
+[node name="PlayerController" type="CharacterBody2D" unique_id=786851366]
+collision_mask = 6
+script = ExtResource("1_0ogo7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1429283880]
+texture = ExtResource("2_esej2")
+
+[node name="FloorWallCollision" type="CollisionShape2D" parent="." unique_id=1311069255]
+shape = SubResource("RectangleShape2D_q0yft")
