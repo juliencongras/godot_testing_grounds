@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bn2xql6q46335" path="res://2dActionPlatformer/player/player_controller.gd" id="1_0ogo7"]
 [ext_resource type="Texture2D" uid="uid://cs16da7o38y1a" path="res://icon.svg" id="2_esej2"]
+[ext_resource type="Script" uid="uid://dhr7cpfcfm6c8" path="res://2dActionPlatformer/state_machine/StateMachine.gd" id="3_kpmjh"]
+[ext_resource type="Script" uid="uid://corx38dfd40mc" path="res://2dActionPlatformer/state_machine/States/Idle.gd" id="4_jw1ef"]
+[ext_resource type="Script" uid="uid://bekdthbv1xkrh" path="res://2dActionPlatformer/state_machine/States/Running.gd" id="5_s50yi"]
+[ext_resource type="Script" uid="uid://dhbocj2gs1ovv" path="res://2dActionPlatformer/state_machine/States/Falling.gd" id="6_od5gj"]
+[ext_resource type="Script" uid="uid://c8bvjg0ujtvw3" path="res://2dActionPlatformer/state_machine/States/Jumping.gd" id="7_btsft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0yft"]
 size = Vector2(118, 121)
@@ -15,3 +20,24 @@ texture = ExtResource("2_esej2")
 
 [node name="FloorWallCollision" type="CollisionShape2D" parent="." unique_id=1311069255]
 shape = SubResource("RectangleShape2D_q0yft")
+
+[node name="StateMachine" type="Node" parent="." unique_id=522229049 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_kpmjh")
+initial_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://dhr7cpfcfm6c8"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1942082449]
+script = ExtResource("4_jw1ef")
+metadata/_custom_type_script = "uid://d4m5hg6ttxqhx"
+
+[node name="Running" type="Node" parent="StateMachine" unique_id=547038821]
+script = ExtResource("5_s50yi")
+metadata/_custom_type_script = "uid://d4m5hg6ttxqhx"
+
+[node name="Falling" type="Node" parent="StateMachine" unique_id=2076908878]
+script = ExtResource("6_od5gj")
+metadata/_custom_type_script = "uid://d4m5hg6ttxqhx"
+
+[node name="Jumping" type="Node" parent="StateMachine" unique_id=777438145]
+script = ExtResource("7_btsft")
+metadata/_custom_type_script = "uid://d4m5hg6ttxqhx"
